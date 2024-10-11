@@ -7,7 +7,7 @@ import Labo from './pages/Labo';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/akilasatolu">
       <div className='App'>
         <Routes>
           <Route exact path="/" element={<Home />} />
