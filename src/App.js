@@ -1,16 +1,21 @@
-// import logo from './logo.svg';
 import './App.css';
+import './Components.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Me from './pages/Me';
+import Labo from './pages/Labo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          I LOVE YOU&#128150;
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/me" element={<Me />} />
+          <Route path="/labo" element={<Labo />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

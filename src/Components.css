@@ -1,0 +1,111 @@
+.Link-in {
+    border-bottom: 2px solid #24936E;
+    font-weight: bold;
+}
+
+.Link-in .Link-icon {
+  display: none;
+}
+
+.Link-in:hover .Link-icon {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.Link-out .Link-icon {
+    margin-left: 3px;
+}
+
+.Link-home {
+    padding: 10px;
+}
+
+.Link-home .Link-icon {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.Link-home .Link-icon:hover {
+    padding: 8px;
+    background: rgba(36, 147, 110, 0.1);
+    border: 2px solid #24936E;
+    border-radius: 8px;
+}
+
+.Texts {
+    padding: 10px 20px 0;
+}
+
+.Text {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.Details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 0;
+}
+
+.Detail {
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #24936E;
+    padding-top: 20px;
+}
+
+.Detail-inner:hover .Detail-title, .Detail-inner:hover .Detail-text {
+    background: rgba(36, 147, 110, 0.1);
+}
+
+.Detail-title {
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.Detail-text {
+    overflow-wrap: break-word;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    line-height: 1.5;
+}
+
+.Section-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px 0;
+}
+
+.Badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px 0;
+}
+
+.Badge-item {
+    margin: 3px;
+    padding: 3px;
+    background: rgba(36, 147, 110, 0.1);
+    border-radius: 3px;
+    border: 1px solid #24936E;
+}
+
+.Badge-list .Badge-item {
+    margin-top: 3px;
+}
+
+.Icon-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px 0;
+}
+
+.Icon-left > *:first-child {
+    margin-right: 5px;
+}

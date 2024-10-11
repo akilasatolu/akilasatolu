@@ -1,0 +1,17 @@
+{
+    "data":{
+        "Labo":[
+            {
+                "title":"Yupgi tteokbokki tabetai",
+                "url":"https://akilasatolu.github.io/akilasatolu/",
+                "disc":"This is sample.This is sample.This is sample.This is sample.This is sample."
+            },
+            {
+                "title":"abcdefghijklmnopqrstuvwxyz",
+                "url":"https://akilasatolu.github.io/akilasatolu/",
+                "disc":"This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample.This is sample."
+            }
+        ],
+        "Skills":["HTML", "CSS", "JavaScript", "React", "Git", "GitHub", "jQuery", "VSCode", "SourceTree", "TortoiseGit", "Photoshop", "Illustrator"]
+    }
+}
