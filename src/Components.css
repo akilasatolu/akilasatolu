@@ -1,15 +1,15 @@
 .Link-in {
-    border-bottom: 2px solid #24936E;
+    border-bottom: 2px solid var(--main-highlight-color);
     font-weight: bold;
 }
 
 .Link-in .Link-icon {
-  display: none;
+    display: none;
 }
 
 .Link-in:hover .Link-icon {
-  display: inline-block;
-  margin-left: 3px;
+    display: inline-block;
+    margin-left: 3px;
 }
 
 .Link-out .Link-icon {
@@ -28,12 +28,12 @@
 .Link-home .Link-icon:hover {
     padding: 8px;
     background: rgba(36, 147, 110, 0.1);
-    border: 2px solid #24936E;
+    border: 2px solid var(--main-highlight-color);
     border-radius: 8px;
 }
 
 .Texts {
-    padding: 10px 20px 0;
+    padding-top: 10px;
 }
 
 .Text {
@@ -47,13 +47,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 0;
+    padding-top: 20px;
 }
 
 .Detail {
     text-align: left;
     width: 100%;
-    border-top: 1px solid #24936E;
+    border-top: 1px solid var(--main-highlight-color);
     padding-top: 20px;
 }
 
@@ -77,13 +77,13 @@
 .Section-title {
     font-weight: bold;
     font-size: 20px;
-    padding: 10px 20px 0;
+    padding-top: 10px;
 }
 
 .Badge-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 20px 0;
+    padding-top: 10px;
 }
 
 .Badge-item {
@@ -91,7 +91,7 @@
     padding: 3px;
     background: rgba(36, 147, 110, 0.1);
     border-radius: 3px;
-    border: 1px solid #24936E;
+    border: 1px solid var(--main-highlight-color);
 }
 
 .Badge-list .Badge-item {
@@ -103,7 +103,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 20px 0;
+    padding-top: 10px;
 }
 
 .Icon-left > *:first-child {
