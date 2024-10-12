@@ -16,32 +16,6 @@
     margin-left: 3px;
 }
 
-.Link-home {
-    padding: 10px;
-}
-
-.Link-home .Link-icon {
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.Link-home .Link-icon:hover {
-    padding: 8px;
-    background: rgba(36, 147, 110, 0.1);
-    border: 2px solid var(--main-highlight-color);
-    border-radius: 8px;
-}
-
-.Texts {
-    padding-top: 10px;
-}
-
-.Text {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
-}
-
 .Details {
     display: flex;
     flex-direction: column;
@@ -108,4 +82,37 @@
 
 .Icon-left > *:first-child {
     margin-right: 5px;
+}
+
+
+/* ===========================================
+LinkHome
+=========================================== */
+.Link_home {
+    padding: 10px;
+}
+
+.Link_home .Link_home_icon {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.Link_home .Link_home_icon:hover {
+    padding: 8px;
+    background: rgba(36, 147, 110, 0.1);
+    border: 2px solid var(--main-highlight-color);
+    border-radius: 8px;
+}
+
+/* ===========================================
+Text
+=========================================== */
+.Texts {
+    padding-top: 10px;
+}
+
+.Text {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
 }

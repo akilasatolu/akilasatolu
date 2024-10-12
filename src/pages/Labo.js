@@ -2,13 +2,14 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import Text from '../Components';
+import Text from '../Components/Text';
+import Home from '../Components/LinkHome';
 import Data from '../datas/data.json';
 
 function Labo() {
   return (
     <div className='App-inner'>
-      <div className='Link-home'><Link to="/" className='Link-icon'><FontAwesomeIcon icon={faHouse} /></Link></div>
+      <Home />
       <Text>{'I am deeply curious about emerging technologies and continuously strive to enhance my knowledge.\nI translate this knowledge into actionable skills through coding and project development.\nHere, you can see some of the work that has resulted from my efforts.'}</Text>
       {(()=>{
         const data = Data.data.Labo;
