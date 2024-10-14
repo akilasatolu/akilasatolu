@@ -1,65 +1,3 @@
-.link_in {
-    border-bottom: 2px solid var(--main-highlight-color);
-    font-weight: bold;
-}
-
-.link_in .link_icon {
-    display: none;
-}
-
-.link_in:hover .link_icon {
-    display: inline-block;
-    margin-left: 3px;
-}
-
-.link_out .link_icon {
-    margin-left: 3px;
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-.detail {
-    text-align: left;
-    width: 100%;
-    border-top: 1px solid var(--main-highlight-color);
-    padding-top: 20px;
-}
-
-.detail_inner:hover .detail_title, .detail_inner:hover .detail_text {
-    background: rgba(36, 147, 110, 0.1);
-}
-
-.detail_title {
-    padding: 5px;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-}
-
-.detail_text {
-    overflow-wrap: break-word;
-    padding: 5px;
-    border-radius: 0 0 5px 5px;
-    line-height: 1.5;
-}
-
-.icon_left {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.icon_left > *:first-child {
-    margin-right: 5px;
-}
-
-
 /* ===========================================
 LinkHome
 =========================================== */
@@ -86,4 +24,76 @@ Text
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
+}
+
+/* ===========================================
+ListColumn
+=========================================== */
+.list_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.list_column_item {
+    margin-top: 10px;
+}
+
+.list_column_item_l {
+    margin-top: 20px;
+    font-size: var(--font-size-large);
+}
+
+/* ===========================================
+Articles
+=========================================== */
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.article {
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid var(--main-highlight-color);
+    padding-top: 20px;
+}
+
+.article_inner:hover .article_title, .article_inner:hover .article_text {
+    background: rgba(36, 147, 110, 0.1);
+}
+
+.article_title {
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.article_text {
+    overflow-wrap: break-word;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    line-height: 1.5;
+}
+
+/* ===========================================
+BadgeList
+=========================================== */
+.badge_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.badge_item {
+    margin: 3px;
+    padding: 3px;
+    background: rgba(36, 147, 110, 0.1);
+    border-radius: 3px;
+    border: 1px solid var(--main-highlight-color);
+}
+
+.badge_list .badge_item {
+    margin-top: 3px;
 }

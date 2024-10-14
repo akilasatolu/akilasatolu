@@ -29,33 +29,23 @@
     padding: 10px 0;
 }
 
-.badge_list {
-    display: flex;
-    flex-wrap: wrap;
+.text_link {
+    border-bottom: 2px solid var(--main-highlight-color);
+    font-weight: bold;
 }
 
-.badge_item {
-    margin: 3px;
-    padding: 3px;
-    background: rgba(36, 147, 110, 0.1);
-    border-radius: 3px;
-    border: 1px solid var(--main-highlight-color);
+.icon_left {
+    margin-right: 5px;
 }
 
-.badge_list .badge_item {
-    margin-top: 3px;
+.icon_right {
+    margin-left: 5px;
 }
 
-.list_column {
-    display: flex;
-    flex-direction: column;
+.h_appear .h_appear_item {
+    display: none;
 }
 
-.list_column_item {
-    margin-top: 10px;
-}
-
-.list_column_item_l {
-    margin-top: 20px;
-    font-size: var(--font-size-large);
+.h_appear:hover .h_appear_item {
+    display: inline-block;
 }

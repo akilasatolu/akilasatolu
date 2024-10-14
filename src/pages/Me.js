@@ -4,9 +4,15 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Text from '../Components/Text';
 import Home from '../Components/LinkHome';
+import ListColumn from '../Components/ListColumn'
+import BadgeList from '../Components/BadgeList'
 import Data from '../datas/data.json';
 
 function Me() {
+    const infos = [
+        <p><FontAwesomeIcon className='icon_left' icon={faEnvelope} />shogo.620@gmail.com</p>,
+        <a href={'https://github.com/akilasatolu'} target='_blank' rel='noopener'><p><FontAwesomeIcon className='icon_left' icon={faGithub} />akilasatolu<FontAwesomeIcon className='icon_right' icon={faArrowUpRightFromSquare} /></p></a>
+    ];
     return (
         <div className='app_inner'>
             <Home />
@@ -19,37 +25,13 @@ function Me() {
             <section className='section'>
                 <div className='section_title'><p>SKILLS</p></div>
                 <div className='section_body'>
-                    {(()=>{
-                        const data = Data.data.Skills;
-                        if(data.length===0) return;
-                        return (
-                            <ul className='badge_list'>
-                                {
-                                data.map((d, i) => {
-                                    return (
-                                        <li key={i} className='badge_item'>{d}</li>
-                                    );
-                                })
-                                }
-                            </ul>
-                        );
-                    })()}
+                    <BadgeList datas={Data.data.Skills} />
                 </div>
             </section>
             <section className='section'>
                 <div className='section_title'><p>MORE ABOUT ME</p></div>
                 <div className='section_body'>
-                    <ul className='list_column'>
-                        <li className='list_column_item icon_left'>
-                            <FontAwesomeIcon icon={faEnvelope} />
-                            <p>shogo.620@gmail.com</p>
-                        </li>
-                        <li className='list_column_item'>
-                            <a href={'https://github.com/akilasatolu'} className='link_out' target='_black' rel='noopener'>
-                                <p className='icon_left'><FontAwesomeIcon icon={faGithub} />{'akilasatolu'}<FontAwesomeIcon icon={faArrowUpRightFromSquare} className='link_icon' /></p>
-                            </a>
-                        </li>
-                    </ul>
+                    <ListColumn datas={infos} />
                 </div>
             </section>
         </div>
