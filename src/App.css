@@ -1,4 +1,4 @@
-.App {
+.app {
     text-align: center;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
@@ -7,10 +7,55 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
 }
 
-.App-inner {
+.app_inner {
     width: 80%;
-    padding: 24px 0;
+    padding: 40px 0;
+}
+
+.section {
+    padding-top: 20px;
+}
+
+.section_title {
+    font-weight: bold;
+    font-size: var(--font-size-large);
+    padding: 10px 0;
+}
+
+.section_body {
+    padding: 10px 0;
+}
+
+.badge_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.badge_item {
+    margin: 3px;
+    padding: 3px;
+    background: rgba(36, 147, 110, 0.1);
+    border-radius: 3px;
+    border: 1px solid var(--main-highlight-color);
+}
+
+.badge_list .badge_item {
+    margin-top: 3px;
+}
+
+.list_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.list_column_item {
+    margin-top: 10px;
+}
+
+.list_column_item_l {
+    margin-top: 20px;
+    font-size: var(--font-size-large);
 }

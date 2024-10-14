@@ -1,22 +1,22 @@
-.Link-in {
+.link_in {
     border-bottom: 2px solid var(--main-highlight-color);
     font-weight: bold;
 }
 
-.Link-in .Link-icon {
+.link_in .link_icon {
     display: none;
 }
 
-.Link-in:hover .Link-icon {
+.link_in:hover .link_icon {
     display: inline-block;
     margin-left: 3px;
 }
 
-.Link-out .Link-icon {
+.link_out .link_icon {
     margin-left: 3px;
 }
 
-.Details {
+.details {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,63 +24,38 @@
     padding-top: 20px;
 }
 
-.Detail {
+.detail {
     text-align: left;
     width: 100%;
     border-top: 1px solid var(--main-highlight-color);
     padding-top: 20px;
 }
 
-.Detail-inner:hover .Detail-title, .Detail-inner:hover .Detail-text {
+.detail_inner:hover .detail_title, .detail_inner:hover .detail_text {
     background: rgba(36, 147, 110, 0.1);
 }
 
-.Detail-title {
+.detail_title {
     padding: 5px;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
 
-.Detail-text {
+.detail_text {
     overflow-wrap: break-word;
     padding: 5px;
     border-radius: 0 0 5px 5px;
     line-height: 1.5;
 }
 
-.Section-title {
-    font-weight: bold;
-    font-size: 20px;
-    padding-top: 10px;
-}
-
-.Badge-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 10px;
-}
-
-.Badge-item {
-    margin: 3px;
-    padding: 3px;
-    background: rgba(36, 147, 110, 0.1);
-    border-radius: 3px;
-    border: 1px solid var(--main-highlight-color);
-}
-
-.Badge-list .Badge-item {
-    margin-top: 3px;
-}
-
-.Icon-left {
+.icon_left {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 10px;
 }
 
-.Icon-left > *:first-child {
+.icon_left > *:first-child {
     margin-right: 5px;
 }
 
@@ -88,16 +63,16 @@
 /* ===========================================
 LinkHome
 =========================================== */
-.Link_home {
-    padding: 10px;
+.link_home {
+    padding: 10px 0;
 }
 
-.Link_home .Link_home_icon {
+.link_home .link_home_icon {
     padding: 10px;
     border-radius: 8px;
 }
 
-.Link_home .Link_home_icon:hover {
+.link_home .link_home_icon:hover {
     padding: 8px;
     background: rgba(36, 147, 110, 0.1);
     border: 2px solid var(--main-highlight-color);
@@ -107,11 +82,7 @@ LinkHome
 /* ===========================================
 Text
 =========================================== */
-.Texts {
-    padding-top: 10px;
-}
-
-.Text {
+.texts {
     font-size: 16px;
     line-height: 1.5;
     text-align: left;

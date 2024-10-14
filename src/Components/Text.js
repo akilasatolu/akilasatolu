@@ -9,8 +9,8 @@ function Text(props){
         );
     });
     return (
-        <div className="Texts">
-            <p className="Text">{txt}</p>
+        <div className="texts">
+            <p>{txt}</p>
         </div>
     );
 }
