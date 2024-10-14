@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Text from '../Components/Text';
 import Home from '../Components/LinkHome';
 import ListColumn from '../Components/ListColumn'

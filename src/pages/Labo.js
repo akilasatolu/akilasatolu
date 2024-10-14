@@ -1,7 +1,7 @@
 import Text from '../Components/Text';
 import Home from '../Components/LinkHome';
-import Data from '../datas/data.json';
 import Articles from '../Components/Articles';
+import Data from '../datas/data.json';
 
 function Labo() {
     return (

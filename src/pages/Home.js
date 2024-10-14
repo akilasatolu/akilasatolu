@@ -5,8 +5,8 @@ import ListColumn from '../Components/ListColumn';
 
 function Home() {
     const datas = [
-        <p>Hi,I'm <Link to="/me" className="h_appear text_link">akilasatolu<span className='h_appear_item'><FontAwesomeIcon className='icon_right' icon={faHandPointLeft} /></span></Link>.</p>,
-        <p>My Labo is <Link to="/labo" className="h_appear text_link">here<span className='h_appear_item'><FontAwesomeIcon className='icon_right' icon={faHandPointLeft} /></span></Link>.</p>
+        <p>Hi,I'm <Link to="/me" className="text_link_h">akilasatolu<FontAwesomeIcon className='text_link_h_item' icon={faHandPointLeft} /></Link>.</p>,
+        <p>My Labo is <Link to="/labo" className="text_link_h">here<FontAwesomeIcon className='text_link_h_item' icon={faHandPointLeft} /></Link>.</p>
     ];
     return (
         <div className='app_inner'>
