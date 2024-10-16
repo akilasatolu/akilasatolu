@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-normal);
+    position: relative;
 }
 
 .app_inner {

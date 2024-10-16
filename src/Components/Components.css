@@ -97,3 +97,25 @@ BadgeList
 .badge_list .badge_item {
     margin-top: 3px;
 }
+
+/* ===========================================
+ChangeLang
+=========================================== */
+.changeLang {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+}
+
+.changeLang_btn {
+    font-size: var(--font-size-small);
+    padding: 3px;
+}
+
+.changeLang .changeLang_btn:first-child {
+    margin-right: 5px;
+}
+
+.changeLang_btn.changeLang_selected {
+    font-weight: bold;
+}
