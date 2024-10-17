@@ -110,10 +110,11 @@ ChangeLang
 .changeLang_btn {
     font-size: var(--font-size-small);
     padding: 3px;
+    margin-right: 5px;
 }
 
-.changeLang .changeLang_btn:first-child {
-    margin-right: 5px;
+.changeLang .changeLang_btn:last-child {
+    margin-right: 0;
 }
 
 .changeLang_btn.changeLang_selected {
