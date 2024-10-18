@@ -4,11 +4,9 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 function LinkHome(){
     return (
-        <div className='link_home'>
-            <Link to="/" className='link_home_icon'>
-                <FontAwesomeIcon icon={faHouse} />
-            </Link>
-        </div>
+        <Link to="/" className='link_home'>
+            <FontAwesomeIcon icon={faHouse} />
+        </Link>
     );
 }
 
