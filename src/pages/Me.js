@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 function Me() {
     const infos = [
-        <p><FontAwesomeIcon className='icon_left' icon={faEnvelope} />shogo.620@gmail.com</p>,
+        <p><FontAwesomeIcon className='icon_left' icon={faEnvelope} />620.shogo@gmail.com</p>,
         <a href={'https://github.com/akilasatolu'} target='_blank' rel='noopener'><p><FontAwesomeIcon className='icon_left' icon={faGithub} />akilasatolu<FontAwesomeIcon className='icon_right' icon={faArrowUpRightFromSquare} /></p></a>
     ];
     const { t } = useTranslation();
