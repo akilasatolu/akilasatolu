@@ -10,7 +10,7 @@
 ## Tech Stack
 - HTML
 - CSS
-- JavaScript
+- JavaScript(TypeScript)
 - React.js
   - Create React App
   - useState
