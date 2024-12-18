@@ -4,7 +4,7 @@ import { useState } from 'react';
 function ChangeLang() {
     const { i18n } = useTranslation();
     const [activeLang, setIsActive] = useState('en');
-    const changeLanguage = (lng) => {
+    const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
         setIsActive(lng);
     };

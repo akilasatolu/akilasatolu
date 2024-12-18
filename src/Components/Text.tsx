@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Text(props){
-    const txt = props.children.split(/(\n)/).map((t, i) => {
+function Text(props: any){
+    const txt = props.children.split(/(\n)/).map((t: string, i: number) => {
         return (
             <React.Fragment key={i}>
                 { t.match(/\n/) ? <br /> : t }

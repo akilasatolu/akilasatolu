@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-const Articles = ({datas}) => {
+const Articles = ({datas}: any) => {
     if(!datas || datas.length === 0) return;
     return (
         <ul className='articles'>
-            {datas.map((d, i) => {
+            {datas.map((d: {url: string, title: string, disc: string}, i: number) => {
                 return (
                 <li key={i} className='article'>
                     <a href={d.url} className='article_inner' target='_blank' rel='noopener'>
