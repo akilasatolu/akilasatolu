@@ -41,6 +41,7 @@ export type WorksContentData = {
   title: string;
   description: string;
   link: string;
+  techList: string[];
 };
 
 // Experience

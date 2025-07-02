@@ -11,7 +11,7 @@ type LaboContentItemProps = {
 export const LaboContentItem = (props: LaboContentItemProps) => {
   return (
     <li>
-      <Link to={pageInfo.Labo.to + props.content.link}>
+      <Link className="space-y-3" to={pageInfo.Labo.to + props.content.link}>
         <ArticleTitle text={props.content.title} />
         <ArticleDescription text={props.content.description} />
       </Link>

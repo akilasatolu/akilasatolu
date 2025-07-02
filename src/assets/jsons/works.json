@@ -3,17 +3,20 @@
     {
       "title": "TT Manager",
       "description": "TT Manager is a simple time tracker to help you remember how long you spent on each task. Just log your work quickly, and use the records for better time estimation and review.",
-      "link": "https://akilasatolu.github.io/ttmanager/"
+      "link": "https://akilasatolu.github.io/ttmanager/",
+      "techList": ["TypeScript", "React", "GitHub Pages"]
     },
     {
       "title": "PyYorozuya",
       "description": "PyYorozuya is a multifunctional utility tool that supports daily tasks such as file name retrieval, string replacement, grep, file renaming, and line counting. It is named after the Japanese word for “jack-of-all-trades.”",
-      "link": "https://github.com/akilasatolu/PyYorozuya"
+      "link": "https://github.com/akilasatolu/PyYorozuya",
+      "techList": ["Python"]
     },
     {
       "title": "test003",
       "description": "This is a test description for test003.",
-      "link": "https://github.com/akilasatolu"
+      "link": "https://github.com/akilasatolu",
+      "techList": ["xxxx", "yyyy"]
     }
   ]
 }

@@ -7,7 +7,7 @@ type LaboContentsProps = {
 
 export const LaboContents = (props: LaboContentsProps) => {
   return (
-    <ul className='space-y-4 list-disc pl-5'>
+    <ul className='space-y-10 list-disc pl-5'>
       {props.laboContents.map((content, index) => (
         <LaboContentItem key={index} content={content} />
       ))}

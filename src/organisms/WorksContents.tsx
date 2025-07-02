@@ -7,7 +7,7 @@ type WorksContentsProps = {
 
 export const WorksContents = (props: WorksContentsProps) => {
   return (
-    <ul className='space-y-4 list-disc pl-5'>
+    <ul className='space-y-10 list-disc pl-5'>
       {props.worksContents.map((content, index) => (
         <WorksContentItem key={index} content={content} />
       ))}
