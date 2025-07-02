@@ -1,6 +1,6 @@
 import type { ExperienceData } from '../assets/types';
 import { PageTitle } from '../molecules/PageTitle';
-import { PjList } from '../organisms/pjList';
+import { PjList } from '../organisms/PjList';
 
 type ExperienceInnerProps = {
   experienceData: ExperienceData;
