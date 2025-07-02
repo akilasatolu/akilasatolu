@@ -3,6 +3,7 @@ import { PageTitle } from '../molecules/PageTitle';
 import { LaboContents } from '../organisms/LaboContents';
 import { NoArticles } from '../assets/laboArticles/NoArticles';
 import { Test001 } from '../assets/laboArticles/test001';
+import { pageInfo } from '../assets/const';
 
 type LaboInnerProps = {
   laboData: LaboData;
@@ -15,11 +16,11 @@ export const LaboInner = (props: LaboInnerProps) => {
   // assets/laboArticles/[name].tsxを追加したら、caseを追加する。
   // assets/jsons/labo.jsonにも追加する。
   switch (props.currentPath) {
-    case '/labo/':
+    case pageInfo.Labo.to:
     case '': //チラつき防止
       content = <LaboContents laboContents={props.laboData.laboContents} />;
       break;
-    case '/labo/test001':
+    case pageInfo.Labo.to + 'test001':
       content = <Test001 />;
       break;
     default:

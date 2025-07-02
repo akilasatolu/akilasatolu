@@ -1,7 +1,7 @@
 import { useSetAtom } from 'jotai';
 import { currentNavPathAtom } from '../../assets/Jotai';
 import { useEffect } from 'react';
-import pageInfo from '../../assets/jsons/pageInfo.json';
+import { pageInfo } from '../../assets/const.ts';
 import experienceData from '../../assets/jsons/experience.json';
 import { ExperienceInner } from '../../templates/ExperienceInner';
 

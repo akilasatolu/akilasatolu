@@ -3,27 +3,27 @@
     {
       "title": "test001",
       "description": "This is a test description for test001.",
-      "link": "/labo/test001"
+      "link": "test001"
     },
     {
       "title": "test002",
       "description": "This is a test description for test002.",
-      "link": "/labo/test002"
+      "link": "test002"
     },
     {
       "title": "test003",
       "description": "This is a test description for test003.",
-      "link": "/labo/test003"
+      "link": "test003"
     },
     {
       "title": "test004",
       "description": "This is a test description for test004.This is a test description for test004.This is a test description for test004.This is a test description for test004.This is a test description for test004.",
-      "link": "/labo/test004"
+      "link": "test004"
     },
     {
       "title": "test005",
       "description": "This is a test description for test005, but it doesn't have a page. you can visit error page.",
-      "link": "/labo/test005"
+      "link": "test005"
     }
     
   ]

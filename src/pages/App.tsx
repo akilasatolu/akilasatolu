@@ -6,7 +6,7 @@ import { CmnNav } from "./cmn/CmnNav";
 import { CmnHeader } from './cmn/CmnHeader';
 import { CmnFooter } from './cmn/CmnFooter';
 import '../styles/pages/App.css';
-import pageInfo from '../assets/jsons/pageInfo.json';
+import { pageInfo } from '../assets/const.ts';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useSetAtom } from 'jotai';
 import { currentPathAtom } from '../assets/Jotai';

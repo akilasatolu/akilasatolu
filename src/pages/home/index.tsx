@@ -1,6 +1,6 @@
 import { HomeInner } from '../../templates/HomeInner';
 import data from '../../assets/jsons/index.json';
-import pageInfo from '../../assets/jsons/pageInfo.json';
+import { pageInfo } from '../../assets/const.ts';
 import type { HomeData } from '../../assets/types';
 import { useSetAtom } from 'jotai';
 import { currentNavPathAtom } from '../../assets/Jotai';

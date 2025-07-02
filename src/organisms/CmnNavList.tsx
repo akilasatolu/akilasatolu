@@ -1,7 +1,7 @@
 import { NavLink } from '../atoms/NavLink';
 import { useAtomValue } from 'jotai';
 import { currentNavPathAtom } from '../assets/Jotai';
-import pageInfo from '../assets/jsons/pageInfo.json';
+import { pageInfo } from '../assets/const.ts';
 
 export const CmnNavList = () => {
   const currentNavPath = useAtomValue(currentNavPathAtom);
