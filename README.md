@@ -3,3 +3,5 @@ I'm akilasatolu.
 
 The site below has more information about me.
 I’d be glad if you find something that interests you.
+
+https://akilasatolu.github.io/akilasatolu/
