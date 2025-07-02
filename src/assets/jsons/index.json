@@ -1,0 +1,67 @@
+{
+  "aboutMe": {
+    "name": "akilasatolu",
+    "role": "Front End Engineer",
+    "message": "I build a future that’s free and full of excitement."
+  },
+  "aboutInterested": {
+    "title": "What I’m interested in",
+    "interestedList": ["Workout", "English", "Korean", "Duolingo", "Vite", "AI", "functional programming", "Tailwind", "AWS"]
+  },
+  "aboutList": [
+    {
+      "title": "What I’m proud of",
+      "contentsList": [
+        [
+          "Built my engineering career through self-learning"
+        ],
+        [
+          "Reduced project error rate in first year",
+          "Received company recognition"
+        ],
+        [
+          "Speak three languages",
+          "Japanese: native, English: conversational level, Korean: beginner"
+        ],
+        [
+          "Never forget to be thankful"
+        ],
+        [
+          "Keeping a 38-day streak on Duolingo",
+          "Sure my streak has continued beyond that by now"
+        ],
+        [
+          "Work out 2+ times a week"
+        ]
+      ]
+    },
+    {
+      "title": "Who I want to become",
+      "contentsList": [
+        [
+          "Visit beautiful places around the world"
+        ],
+        [
+          "Living where I love",
+          "Korea or Australia or somewhere",
+          "Studying English and Korean hard right now"
+        ],
+        [
+          "Capable of working from anywhere globally",
+          "Learn backend and infrastructure development"
+        ],
+        [
+          "Working to build muscle and hit 75kg+",
+          "Keep Working out 2+ times a week"
+        ],
+        [
+          "365-day streak on Duolingo",
+          "Just do it"
+        ],
+        [
+          "Cherish time with loved ones"
+        ]
+      ]
+    }
+  ]
+}

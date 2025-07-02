@@ -1,0 +1,18 @@
+{
+  "Home": {
+    "to": "/",
+    "text": "about"
+  },
+  "Experience": {
+    "to": "/experience/",
+    "text": "experience"
+  },
+  "Works": {
+    "to": "/works/",
+    "text": "works"
+  },
+  "Labo": {
+    "to": "/labo/",
+    "text": "labo"
+  }
+}
