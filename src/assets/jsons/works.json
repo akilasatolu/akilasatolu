@@ -1,9 +1,9 @@
 {
   "worksContents": [
     {
-      "title": "test001",
-      "description": "This is a test description for test001.",
-      "link": "https://github.com/akilasatolu"
+      "title": "TT Manager",
+      "description": "TT Manager is a simple time tracker to help you remember how long you spent on each task. Just log your work quickly, and use the records for better time estimation and review.",
+      "link": "https://akilasatolu.github.io/ttmanager/"
     },
     {
       "title": "test002",
