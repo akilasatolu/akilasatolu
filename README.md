@@ -54,3 +54,6 @@ A local-first Markdown "second brain," fed from your AI chats through the Model 
 Everything runs on your machine — no account, no API key, no telemetry, no cost. The CLI command is `mnemo`; the name comes from *mnemo-* (memory) + *-theca* (repository).
 
 </details>
+
+## More
+- https://gitfut.com/akilasatolu
