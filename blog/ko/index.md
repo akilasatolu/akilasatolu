@@ -1,4 +1,4 @@
-[🏠 홈](/README.md)
+🏠 [홈](/README.md)
 
 🌐 [English](/blog/en/index.md) | [日本語](/blog/ja/index.md) | [한국어](/blog/ko/index.md)
 
