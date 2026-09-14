@@ -74,12 +74,17 @@ function wrapHtml(title, bodyHtml) {
     background-color: #0d1117;
     color: #c9d1d9;
     padding: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   a {
     color: #58a6ff;
   }
   code, pre {
     background-color: #161b22;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-width: 100%;
   }
   hr {
     border-color: #30363d;
