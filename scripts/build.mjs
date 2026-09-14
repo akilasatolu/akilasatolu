@@ -35,15 +35,20 @@ function outputPathFor(absSrcPath) {
   return join(OUT_DIR, outRel);
 }
 
+// GitHub Pages project sites are served under /<repo-name>/, so any
+// root-absolute link in the source (e.g. /blog/ja/index.md) needs this
+// prefixed onto it to resolve correctly once deployed.
+const BASE_PATH = "/akilasatolu";
+
 function rewriteMdLinksToHtml(html) {
   // Rewrites href="...something.md" or href="...something.md#anchor" to .html,
   // for both relative paths and root-absolute paths (e.g. /blog/ja/index.md).
   // The root README.md is special-cased since it builds to index.html, not README.html.
   return html.replace(/href="([^"]+?)\.md(#[^"]*)?"/g, (_match, path, anchor = "") => {
-    if (path === "/README" || path === "README") {
-      return `href="${path.replace(/README$/, "index")}.html${anchor}"`;
-    }
-    return `href="${path}.html${anchor}"`;
+    const isRoot = /(^|\/)README$/.test(path);
+    const rewrittenPath = isRoot ? path.replace(/README$/, "index") : path;
+    const withBase = rewrittenPath.startsWith("/") ? `${BASE_PATH}${rewrittenPath}` : rewrittenPath;
+    return `href="${withBase}.html${anchor}"`;
   });
 }
 
