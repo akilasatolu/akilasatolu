@@ -5,7 +5,10 @@
 .vscode/
 .idea/
 
-# Node (in case tooling is added later)
+# Node
 node_modules/
+
+# Build output
+dist/
 
 /blog/yyyymmdd-x.md
