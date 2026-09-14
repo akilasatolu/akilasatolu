@@ -42,4 +42,5 @@ Everything runs on your machine — no account, no API key, no telemetry, no cos
 
 ## More
 - https://akilasatolu.github.io/akilasatolu
+- https://github.com/akilasatolu
 - https://gitfut.com/akilasatolu
