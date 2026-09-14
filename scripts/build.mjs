@@ -73,6 +73,7 @@ function wrapHtml(title, bodyHtml) {
     font-family: "IBM Plex Mono", monospace;
     background-color: #0d1117;
     color: #c9d1d9;
+    padding: 20px;
   }
   a {
     color: #58a6ff;
