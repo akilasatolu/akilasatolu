@@ -40,6 +40,21 @@ Everything runs on your machine — no account, no API key, no telemetry, no cos
 
 </details>
 
+---
+
+<details>
+<summary><a href="https://github.com/akilasatolu/tsuzuri">tsuzuri</a> — a static site generator for Markdown docs, with one-command GitHub Pages deploy</summary>
+
+A small static site generator that turns a folder of Markdown into a themed static site, built around a setup CLI, a build script, and theme CSS. Run `npx github:akilasatolu/tsuzuri init` to scaffold a new project — it generates the build script and a GitHub Actions workflow (dropped into `.github/tsuzuri/` in your repo) that deploys to GitHub Pages automatically on every push.
+
+* 5 built-in themes — base, wa, muji, sumi, ai, shu
+* Markdown → HTML via `marked`, wrapped in a themed layout
+* Auto-deploy workflow generated for you, no CI config to write by hand
+
+Built with Node.js (20+) and ESLint. MIT licensed.
+
+</details>
+
 ## More
 - https://akilasatolu.github.io/akilasatolu
 - https://github.com/akilasatolu
