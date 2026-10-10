@@ -4,6 +4,7 @@
 
 # Blog
 
+- Oct 11, 2026 : [How I Use AI With Claude Code: No Skills, Everything Runs on My Own Platform](20261011-1.md)
 - Jun 7, 2026 : [Updating State With prev in React useState](20260607-1.md)
 - Jun 6, 2026 : [type vs enum](20260606-1.md)
 - May 31, 2026 : [Do you still use a for roop to remove duplicates from a list?](20260531-1.md)
