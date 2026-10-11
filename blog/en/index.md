@@ -4,6 +4,8 @@
 
 # Blog
 
+- Oct 11, 2026 : [I Tried to Improve My Workflow, and Keeping the Current One Turned Out Best](20261011-3.md)
+- Oct 11, 2026 : [I Stopped Using opusplan and Plan Mode: The Main Agent Does PM and Review, Subagents Do Research, Design, and Development](20261011-2.md)
 - Oct 11, 2026 : [How I Use AI With Claude Code: No Skills, Everything Runs on My Own Platform](20261011-1.md)
 - Jun 7, 2026 : [Updating State With prev in React useState](20260607-1.md)
 - Jun 6, 2026 : [type vs enum](20260606-1.md)
