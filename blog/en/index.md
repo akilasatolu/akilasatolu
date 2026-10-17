@@ -4,6 +4,7 @@
 
 # Blog
 
+- Oct 17, 2026 : [I Moved Review Back to a Subagent, and Tried Haiku for the Worker but Stayed With Sonnet](20261017-1.md)
 - Oct 11, 2026 : [I Tried to Improve My Workflow, and Keeping the Current One Turned Out Best](20261011-3.md)
 - Oct 11, 2026 : [I Stopped Using opusplan and Plan Mode: The Main Agent Does PM and Review, Subagents Do Research, Design, and Development](20261011-2.md)
 - Oct 11, 2026 : [How I Use AI With Claude Code: No Skills, Everything Runs on My Own Platform](20261011-1.md)

@@ -4,8 +4,10 @@
 //   extension changes (blog/en/index.md -> dist/blog/en/index.html)
 // - links pointing at another .md file (relative or root-absolute) are
 //   rewritten to point at the generated .html file instead
+// - image files (png, jpg, jpeg, gif, svg, webp) are copied as-is into dist/,
+//   keeping their relative path (blog/images/a.png -> dist/blog/images/a.png)
 
-import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir, copyFile } from "node:fs/promises";
 import { dirname, join, relative, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { marked } from "marked";
@@ -13,16 +15,17 @@ import { marked } from "marked";
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const OUT_DIR = join(ROOT, "dist");
 const EXCLUDE_DIRS = new Set([".git", "node_modules", "dist", ".github", "scripts"]);
+const IMAGE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"]);
 
-async function findMarkdownFiles(dir) {
+async function findFiles(dir, extensions) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
     if (EXCLUDE_DIRS.has(entry.name)) continue;
     const full = join(dir, entry.name);
     if (entry.isDirectory()) {
-      files.push(...(await findMarkdownFiles(full)));
-    } else if (entry.isFile() && extname(entry.name) === ".md") {
+      files.push(...(await findFiles(full, extensions)));
+    } else if (entry.isFile() && extensions.has(extname(entry.name))) {
       files.push(full);
     }
   }
@@ -89,6 +92,10 @@ function wrapHtml(title, bodyHtml) {
   hr {
     border-color: #30363d;
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 </style>
 </head>
 <body>
@@ -99,7 +106,7 @@ ${bodyHtml}
 }
 
 async function build() {
-  const mdFiles = await findMarkdownFiles(ROOT);
+  const mdFiles = await findFiles(ROOT, new Set([".md"]));
 
   for (const srcPath of mdFiles) {
     const raw = await readFile(srcPath, "utf8");
@@ -112,6 +119,15 @@ async function build() {
 
     await mkdir(dirname(outPath), { recursive: true });
     await writeFile(outPath, wrapHtml(title, bodyHtml), "utf8");
+    console.log(`${relative(ROOT, srcPath)} -> ${relative(ROOT, outPath)}`);
+  }
+
+  const imageFiles = await findFiles(ROOT, IMAGE_EXTENSIONS);
+
+  for (const srcPath of imageFiles) {
+    const outPath = join(OUT_DIR, relative(ROOT, srcPath));
+    await mkdir(dirname(outPath), { recursive: true });
+    await copyFile(srcPath, outPath);
     console.log(`${relative(ROOT, srcPath)} -> ${relative(ROOT, outPath)}`);
   }
 }
