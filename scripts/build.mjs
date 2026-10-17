@@ -76,12 +76,58 @@ function wrapHtml(title, bodyHtml) {
     font-family: "IBM Plex Mono", monospace;
     background-color: #0d1117;
     color: #c9d1d9;
-    padding: 20px;
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+    line-height: 1.8;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
   a {
     color: #58a6ff;
+    text-underline-offset: 0.2em;
+  }
+  h1, h2, h3, h4 {
+    line-height: 1.4;
+  }
+  h1 {
+    margin: 1.2em 0 0.8em;
+  }
+  h2 {
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #30363d;
+  }
+  h3 {
+    margin: 1.8em 0 0.6em;
+  }
+  p, ul, ol, table, pre, details {
+    margin: 0 0 1.2em;
+  }
+  ul, ol {
+    padding-left: 1.6em;
+  }
+  li + li {
+    margin-top: 0.4em;
+  }
+  li > ul, li > ol {
+    margin: 0.4em 0 0;
+  }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 0.5em 0.9em;
+    border: 1px solid #30363d;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #161b22;
+    font-weight: 600;
   }
   code, pre {
     background-color: #161b22;
@@ -89,8 +135,34 @@ function wrapHtml(title, bodyHtml) {
     overflow-wrap: anywhere;
     max-width: 100%;
   }
+  code {
+    padding: 0.15em 0.35em;
+    border-radius: 4px;
+  }
+  pre {
+    padding: 1em;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    line-height: 1.6;
+  }
+  pre code {
+    padding: 0;
+    border-radius: 0;
+    background: none;
+  }
+  details {
+    padding: 0.2em 0;
+  }
+  summary {
+    cursor: pointer;
+  }
+  details[open] > summary {
+    margin-bottom: 0.8em;
+  }
   hr {
-    border-color: #30363d;
+    border: 0;
+    border-top: 1px solid #30363d;
+    margin: 2em 0;
   }
   img {
     max-width: 100%;
