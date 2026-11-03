@@ -13,37 +13,7 @@
 ## Projects
 
 <details>
-<summary><a href="https://github.com/akilasatolu/ai-dev-force">ai-dev-force</a> — a Claude Code skill that runs your dev team as agents</summary>
-
-A Claude Code skill for development projects, built around a lead-and-reviewer pattern: the lead agent produces the deliverable, and a review loop repeats revisions until an independent reviewer approves it. Choose one or more agents to run:
-
-* researcher — investigates the problem space
-* designer — designs the solution
-* developer — breaks work into tasks and implements them in priority order/in parallel, with unit tests
-
-When multiple agents are selected, they run automatically in a fixed order — researcher → designer → developer — with the PM (Claude itself) deciding when to move on, no confirmation needed at each step.
-
-</details>
-
----
-
-<details>
-<summary><a href="https://github.com/akilasatolu/mnemotheca">mnemotheca</a> — a local-first second brain for your AI chats</summary>
-
-A local-first Markdown "second brain," fed from your AI chats through the Model Context Protocol (MCP). Your knowledge lives as plain `.md` files in a `vault/` directory you can open with any text editor — Mnemotheca just adds three things on top:
-
-* capture — during a Claude conversation, ask it to save what you just worked out; it writes a well-formed note (frontmatter + summary + detail) into your vault
-* organize — periodically restructures the vault (splits large categories, merges duplicates, files loose notes), with a preview and one-step undo
-* browse — a small local web UI with a category tree, Markdown viewer, keyword search, a usage dashboard, and a settings page
-
-Everything runs on your machine — no account, no API key, no telemetry, no cost. The CLI command is `mnemo`; the name comes from *mnemo-* (memory) + *-theca* (repository).
-
-</details>
-
----
-
-<details>
-<summary><a href="https://github.com/akilasatolu/tsuzuri">tsuzuri</a> — a static site generator for Markdown docs, with one-command GitHub Pages deploy</summary>
+<summary><a href="https://akilasatolu.github.io/tsuzuri/">tsuzuri</a> — a static site generator for Markdown docs, with one-command GitHub Pages deploy</summary>
 
 A small static site generator that turns a folder of Markdown into a themed static site, built around a setup CLI, a build script, and theme CSS. Run `npx github:akilasatolu/tsuzuri init` to scaffold a new project — it generates the build script and a GitHub Actions workflow (dropped into `.github/tsuzuri/` in your repo) that deploys to GitHub Pages automatically on every push.
 
