@@ -1,7 +1,5 @@
 # Hi there, I'm akilasatolu. 🤗
 
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=akilasatolu.visitor-badge)
-
 - 🌏 Living in 🇯🇵 Japan, 🗼Tokyo
 - 🗣️ Speaking Japanese, English, Korean
 - 💻 Working as a Software Engineer since 2020
