@@ -216,13 +216,38 @@ function wrapHtml(title, bodyHtml, lang) {
     background: none;
   }
   details {
-    padding: 0.2em 0;
+    padding: 0.6em 0;
+    border-bottom: 1px solid #30363d;
   }
   summary {
+    display: block;
+    position: relative;
+    padding-left: 1.4em;
     cursor: pointer;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::before {
+    content: "";
+    position: absolute;
+    left: 0.15em;
+    top: 0.6em;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+  }
+  details[open] > summary::before {
+    top: 0.5em;
+    transform: rotate(45deg);
   }
   details[open] > summary {
     margin-bottom: 0.8em;
+  }
+  details > :not(summary) {
+    margin-left: 1.4em;
   }
   hr {
     border: 0;

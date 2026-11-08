@@ -13,15 +13,16 @@
 ## Projects
 
 <details>
-<summary><a href="https://akilasatolu.github.io/tsuzuri/">tsuzuri</a> — a static site generator for Markdown docs, with one-command GitHub Pages deploy</summary>
+<summary><a href="https://akilasatolu.github.io/tsuzuri/">Tsuzuri</a> — turn your README into a docs site on GitHub Pages, with one command</summary>
 
-A small static site generator that turns a folder of Markdown into a themed static site, built around a setup CLI, a build script, and theme CSS. Run `npx github:akilasatolu/tsuzuri init` to scaffold a new project — it generates the build script and a GitHub Actions workflow (dropped into `.github/tsuzuri/` in your repo) that deploys to GitHub Pages automatically on every push.
+For product builders who would rather spend their time on the product than on a docs site. Tsuzuri takes the README you already have, follows its links to your other Markdown pages, and publishes them as a finished-looking docs site on GitHub Pages. No docs framework to learn, no theme to design, no second copy of your docs to keep in sync.
 
-* 5 built-in themes — base, wa, muji, sumi, ai, shu
-* Markdown → HTML via `marked`, wrapped in a themed layout
-* Auto-deploy workflow generated for you, no CI config to write by hand
+* **Set up with one command**: run `npx github:akilasatolu/tsuzuri#v1 init`, switch Pages to GitHub Actions once, and every push updates the site.
+* **Looks finished from day one**: light and dark built in, with 10 styles to choose from in the gallery.
+* **Everything a docs site needs**: sidebar, search, table of contents, OGP images, sitemap, llms.txt and multilingual sites.
+* **Little to maintain**: the build runs on GitHub Actions, and updating is one command, `init --update`.
 
-Built with Node.js (20+) and ESLint. MIT licensed.
+MIT licensed.
 
 </details>
 
