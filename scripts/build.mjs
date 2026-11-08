@@ -99,6 +99,23 @@ function decorateBlog(html, rel, lang) {
   return html;
 }
 
+// Home (README.md) only. The README itself stays as-is for the GitHub profile.
+// Intro list right after the h1: "- EMOJI text"
+const INTRO_LIST = /^(\s*<h1>[\s\S]*?<\/h1>\s*)<ul>\n((?:<li>[\s\S]*?<\/li>\n)+)<\/ul>/;
+const MORE_LIST = /(<h2>More<\/h2>\s*)<ul>/;
+
+function decorateHome(html) {
+  html = html.replace(INTRO_LIST, (_m, head, items) => {
+    const rows = items.replace(/<li>(\S+) ([\s\S]*?)<\/li>/g, '<li><span class="intro-icon" aria-hidden="true">$1</span><span>$2</span></li>');
+    return `${head}<ul class="intro">\n${rows}</ul>`;
+  });
+  html = html.replace(MORE_LIST, '$1<ul class="plain">');
+  if (!html.includes('<ul class="intro">') || !html.includes('<ul class="plain">')) {
+    console.warn("home pattern not found: README.md");
+  }
+  return html;
+}
+
 function extractTitle(html, fallback) {
   const match = html.match(/<h1[^>]*>(.*?)<\/h1>/s);
   if (!match) return fallback;
@@ -277,6 +294,19 @@ function wrapHtml(title, bodyHtml, lang) {
       font-size: 0.875em;
     }
   }
+  .intro {
+    list-style: none;
+    padding-left: 0;
+  }
+  .intro li {
+    display: grid;
+    grid-template-columns: 1.6em 1fr;
+    column-gap: 0.6em;
+  }
+  .plain {
+    list-style: none;
+    padding-left: 0;
+  }
 </style>
 </head>
 <body>
@@ -296,6 +326,7 @@ async function build() {
     const rel = relative(ROOT, srcPath);
     const lang = langFor(srcPath);
     bodyHtml = decorateBlog(bodyHtml, rel, lang);
+    if (rel === "README.md") bodyHtml = decorateHome(bodyHtml);
 
     const outPath = outputPathFor(srcPath);
     const fallbackTitle = relative(ROOT, srcPath);
