@@ -215,9 +215,12 @@ function wrapHtml(title, bodyHtml, lang) {
     border-radius: 0;
     background: none;
   }
-  details {
-    padding: 0.6em 0;
-    border-bottom: 1px solid #30363d;
+  details + details {
+    padding-top: 1.2em;
+    border-top: 1px solid #30363d;
+  }
+  details > :last-child {
+    margin-bottom: 0;
   }
   summary {
     display: block;
