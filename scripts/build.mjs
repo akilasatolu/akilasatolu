@@ -55,15 +55,59 @@ function rewriteMdLinksToHtml(html) {
   });
 }
 
+function langFor(absSrcPath) {
+  const rel = relative(ROOT, absSrcPath);
+  if (rel.startsWith("blog/ja/")) return "ja";
+  if (rel.startsWith("blog/ko/")) return "ko";
+  return "en";
+}
+
+const ICON_ATTRS = 'class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+const ICONS = {
+  home: `<svg ${ICON_ATTRS}><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v12h14V9"/></svg>`,
+  globe: `<svg ${ICON_ATTRS}><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg>`,
+  back: `<svg ${ICON_ATTRS}><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>`,
+};
+
+// Blog index: "🏠 [HOME](...)" and "🌐 [English](...) | ..." -> one nav row
+const INDEX_NAV = /^\s*<p>\u{1F3E0} (<a [^>]*>[^<]*<\/a>)<\/p>\s*<p>\u{1F310} ((?:<a [^>]*>[^<]*<\/a>(?: \| )?)+)<\/p>/u;
+// Blog post: "⬅️ [BACK](...)" -> nav row
+const POST_NAV = /^\s*<p>\u2B05\uFE0F (<a [^>]*>[^<]*<\/a>)<\/p>/u;
+// Blog index item: "- DATE : [TITLE](...)"
+const POST_ITEM = /<li>([^<]+?) : (<a [^>]*>[\s\S]*?<\/a>)<\/li>/g;
+
+function withIcon(anchorHtml, icon) {
+  return anchorHtml.replace(/^(<a [^>]*>)/, `$1${icon}`);
+}
+
+function decorateBlog(html, rel, lang) {
+  if (/^blog\/[^/]+\/index\.md$/.test(rel)) {
+    if (!INDEX_NAV.test(html)) console.warn(`nav pattern not found: ${rel}`);
+    html = html.replace(INDEX_NAV, (_m, home, langs) => {
+      const links = langs
+        .split(" | ")
+        .map((a) => (a.includes(`/blog/${lang}/index.html`) ? a.replace("<a ", '<a aria-current="page" ') : a))
+        .join("");
+      return `<nav class="page-nav">${withIcon(home, ICONS.home)}<span class="lang-switch">${ICONS.globe}${links}</span></nav>`;
+    });
+    html = html.replace(POST_ITEM, '<li class="post"><span class="post-date">$1</span>$2</li>');
+    html = html.replace(/<ul>(\s*<li class="post">)/, '<ul class="posts">$1');
+  } else if (/^blog\/[^/]+\/\d{8}-\d+\.md$/.test(rel)) {
+    if (!POST_NAV.test(html)) console.warn(`nav pattern not found: ${rel}`);
+    html = html.replace(POST_NAV, (_m, back) => `<nav class="page-nav">${withIcon(back, ICONS.back)}</nav>`);
+  }
+  return html;
+}
+
 function extractTitle(html, fallback) {
   const match = html.match(/<h1[^>]*>(.*?)<\/h1>/s);
   if (!match) return fallback;
   return match[1].replace(/<[^>]+>/g, "").trim() || fallback;
 }
 
-function wrapHtml(title, bodyHtml) {
+function wrapHtml(title, bodyHtml, lang) {
   return `<!doctype html>
-<html lang="en">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,22 +174,26 @@ function wrapHtml(title, bodyHtml) {
     font-weight: 600;
   }
   code, pre {
+    font-family: inherit;
     background-color: #161b22;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     max-width: 100%;
   }
   code {
+    font-size: 0.9em;
     padding: 0.15em 0.35em;
     border-radius: 4px;
   }
   pre {
+    font-size: 0.875em;
     padding: 1em;
     border: 1px solid #30363d;
     border-radius: 6px;
     line-height: 1.6;
   }
   pre code {
+    font-size: inherit;
     padding: 0;
     border-radius: 0;
     background: none;
@@ -168,6 +216,67 @@ function wrapHtml(title, bodyHtml) {
     max-width: 100%;
     height: auto;
   }
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em 1.5em;
+    margin: 0 0 2.5em;
+    font-size: 0.875em;
+  }
+  .page-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    text-decoration: none;
+  }
+  .page-nav a:hover {
+    text-decoration: underline;
+  }
+  .lang-switch {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4em 1em;
+  }
+  .lang-switch a[aria-current="page"] {
+    color: inherit;
+  }
+  .icon {
+    width: 1.1em;
+    height: 1.1em;
+    flex: none;
+  }
+  .posts {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.6em 1.5em;
+    padding-left: 0;
+    list-style: none;
+  }
+  .posts > li + li {
+    margin-top: 0;
+  }
+  .post {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 2;
+  }
+  @media (max-width: 40em) {
+    .posts {
+      grid-template-columns: 1fr;
+      row-gap: 1.1em;
+    }
+    .post {
+      display: block;
+      grid-column: auto;
+    }
+    .post-date {
+      display: block;
+      font-size: 0.875em;
+    }
+  }
 </style>
 </head>
 <body>
@@ -184,13 +293,16 @@ async function build() {
     const raw = await readFile(srcPath, "utf8");
     let bodyHtml = marked.parse(raw);
     bodyHtml = rewriteMdLinksToHtml(bodyHtml);
+    const rel = relative(ROOT, srcPath);
+    const lang = langFor(srcPath);
+    bodyHtml = decorateBlog(bodyHtml, rel, lang);
 
     const outPath = outputPathFor(srcPath);
     const fallbackTitle = relative(ROOT, srcPath);
     const title = extractTitle(bodyHtml, fallbackTitle);
 
     await mkdir(dirname(outPath), { recursive: true });
-    await writeFile(outPath, wrapHtml(title, bodyHtml), "utf8");
+    await writeFile(outPath, wrapHtml(title, bodyHtml, lang), "utf8");
     console.log(`${relative(ROOT, srcPath)} -> ${relative(ROOT, outPath)}`);
   }
 
