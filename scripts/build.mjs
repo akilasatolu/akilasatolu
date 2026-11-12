@@ -309,6 +309,15 @@ function wrapHtml(title, bodyHtml, lang) {
     grid-column: span 2;
   }
   @media (max-width: 40em) {
+    body {
+      padding: 24px 20px 32px;
+    }
+    body > :first-child {
+      margin-top: 0;
+    }
+    body > :last-child {
+      margin-bottom: 0;
+    }
     .posts {
       grid-template-columns: 1fr;
       row-gap: 1.1em;
