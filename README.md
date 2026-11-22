@@ -1,1 +1,1 @@
-<a href="https://akilasatolu.github.io/akilasatolu/">![Click here](/docs/assets/tiger.png)</a>
+<a href="https://akilasatolu.github.io/akilasatolu/">![Click here](/assets/tiger.png)</a>
