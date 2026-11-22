@@ -4,7 +4,7 @@
 - 🗣️ Speaking Japanese, English, Korean
 - 💻 Working as a Software Engineer since 2020
 - 🚀 Aspiring to be an engineer who can solve problems quickly across the entire stack
-- 📚 Sharing what I learn on my <a href="https://akilasatolu.github.io/akilasatolu/blog/en" target="_blank" rel="noopener noreferrer"><img align="absmiddle" src="https://img.shields.io/badge/Blog-FF5722?style=flat&logo=rss&logoColor=white"></a>
+- 📚 Sharing what I learn on my <a href="https://akilasatolu.github.io/akilasatolu/blog/en"><img align="absmiddle" src="https://img.shields.io/badge/Blog-FF5722?style=flat&logo=rss&logoColor=white"></a>
 - 🕊️ Check my career & contact me on <a href="https://www.linkedin.com/in/shogo-yoshizawa-70794a374/" target="_blank" rel="noopener noreferrer"><img align="absmiddle" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
 
 ## Tech Stack
