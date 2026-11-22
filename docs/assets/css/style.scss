@@ -1,0 +1,21 @@
+---
+---
+
+@import "jekyll-theme-primer";
+
+.markdown-body > h1 {
+  font-size: 1.25rem;
+  border-bottom: 0;
+}
+
+.markdown-body > h1 a {
+  color: inherit;
+}
+
+.markdown-body small {
+  color: #57606a;
+}
+
+.markdown-body h3 {
+  margin-top: 2rem;
+}
