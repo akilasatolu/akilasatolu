@@ -3,6 +3,20 @@
 
 @import "jekyll-theme-primer";
 
+.markdown-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #1f2328;
+}
+
+.markdown-body a {
+  color: #0969da;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom-color: #d1d9e0b3;
+}
+
 .markdown-body > h1 {
   font-size: 1.25rem;
   border-bottom: 0;
@@ -12,10 +26,117 @@
   color: inherit;
 }
 
-.markdown-body small {
-  color: #57606a;
+.markdown-body small,
+.markdown-body h6 {
+  color: #59636e;
 }
 
 .markdown-body h3 {
   margin-top: 2rem;
+}
+
+.markdown-body blockquote {
+  color: #59636e;
+  border-left-color: #d1d9e0;
+}
+
+.markdown-body hr {
+  background-color: #d1d9e0;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border-color: #d1d9e0;
+}
+
+.markdown-body table tr {
+  border-top-color: #d1d9e0b3;
+}
+
+.markdown-body code,
+.markdown-body tt,
+.markdown-body pre {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  background-color: #818b981f;
+  border-radius: 6px;
+}
+
+.markdown-body pre,
+.markdown-body .highlight pre {
+  border-radius: 6px;
+}
+
+.markdown-body .highlight {
+  background-color: transparent;
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .c, .c1, .cd, .cm, .cp, .cs, .go, .gp {
+    color: #59636e;
+  }
+
+  .k, .kd, .kn, .kp, .kr, .kv {
+    color: #cf222e;
+  }
+
+  .o, .ow, .kc, .kt, .bp, .no, .ni, .nt, .m, .mb, .mf, .mh, .mi, .mo, .mx, .il {
+    color: #0550ae;
+  }
+
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss, .sx, .dl {
+    color: #0a3069;
+  }
+
+  .na, .nb, .nc, .nd, .ne, .nf, .nl {
+    color: #6639ba;
+  }
+
+  .nv, .vc, .vg, .vi {
+    color: #953800;
+  }
+
+  .nn {
+    color: #1f2328;
+  }
+
+  .err {
+    color: #f6f8fa;
+    background-color: #82071e;
+  }
+
+  .gd {
+    color: #82071e;
+    background-color: #ffebe9;
+  }
+
+  .gi {
+    color: #116329;
+    background-color: #dafbe1;
+  }
+
+  .gr, .gt {
+    color: #82071e;
+  }
+
+  .gh, .gu {
+    font-weight: bold;
+    color: #0550ae;
+  }
+
+  .ge {
+    font-style: italic;
+    color: #1f2328;
+  }
+
+  .gs {
+    font-weight: bold;
+    color: #1f2328;
+  }
 }
