@@ -5,10 +5,4 @@
 .vscode/
 .idea/
 
-# Node
-node_modules/
-
-# Build output
-dist/
-
-/blog/yyyymmdd-x.md
+/docs/blog/yyyymmdd-x.md
