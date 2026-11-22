@@ -1,7 +1,5 @@
 ## Blog
 
-🏠 [HOME](../../)
-
 🌐 [English](../en/index.md) \| [日本語](../ja/index.md) \| [한국어](../ko/index.md)
 
 - Nov 1, 2026 : [I Switched to a Sonnet Main Agent and Left Only Review to Opus](20261101-1.md)
