@@ -140,3 +140,131 @@
     color: #1f2328;
   }
 }
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #f0f6fc;
+    background-color: #0d1117;
+  }
+
+  .markdown-body {
+    color: #f0f6fc;
+  }
+
+  .markdown-body a {
+    color: #4493f8;
+  }
+
+  .markdown-body h1,
+  .markdown-body h2 {
+    border-bottom-color: #3d444db3;
+  }
+
+  .markdown-body small,
+  .markdown-body h6 {
+    color: #9198a1;
+  }
+
+  .markdown-body blockquote {
+    color: #9198a1;
+    border-left-color: #3d444d;
+  }
+
+  .markdown-body hr {
+    background-color: #3d444d;
+  }
+
+  .markdown-body table th,
+  .markdown-body table td {
+    border-color: #3d444d;
+  }
+
+  .markdown-body table tr {
+    background-color: #0d1117;
+    border-top-color: #3d444db3;
+  }
+
+  .markdown-body table tr:nth-child(2n) {
+    background-color: #151b23;
+  }
+
+  .markdown-body img {
+    background-color: transparent;
+  }
+
+  .markdown-body code,
+  .markdown-body tt {
+    background-color: #656c7633;
+  }
+
+  .markdown-body pre,
+  .markdown-body .highlight pre {
+    background-color: #151b23;
+  }
+
+  .markdown-body pre code,
+  .markdown-body pre tt {
+    background-color: transparent;
+  }
+
+  .markdown-body .highlight {
+    .c, .c1, .cd, .cm, .cp, .cs, .go, .gp {
+      color: #9198a1;
+    }
+
+    .k, .kd, .kn, .kp, .kr, .kv {
+      color: #ff7b72;
+    }
+
+    .o, .ow, .kc, .kt, .bp, .no, .ni, .m, .mb, .mf, .mh, .mi, .mo, .mx, .il {
+      color: #79c0ff;
+    }
+
+    .nt {
+      color: #7ee787;
+    }
+
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss, .sx, .dl {
+      color: #a5d6ff;
+    }
+
+    .na, .nb, .nc, .nd, .ne, .nf, .nl {
+      color: #d2a8ff;
+    }
+
+    .nv, .vc, .vg, .vi {
+      color: #ffa657;
+    }
+
+    .nn, .ge, .gs {
+      color: #f0f6fc;
+    }
+
+    .err {
+      color: #f0f6fc;
+      background-color: #8e1519;
+    }
+
+    .gd {
+      color: #ffdcd7;
+      background-color: #67060c;
+    }
+
+    .gi {
+      color: #aff5b4;
+      background-color: #033a16;
+    }
+
+    .gr, .gt {
+      color: #f85149;
+    }
+
+    .gh, .gu {
+      color: #1f6feb;
+    }
+  }
+}
