@@ -26,6 +26,18 @@ MIT licensed.
 
 </details>
 
+<details markdown="1">
+<summary><a href="https://akilasatolu.github.io/any2ascii/">any2ascii</a> — turn images, videos and GIFs into ASCII art, right in your browser</summary>
+
+For anyone who wants ASCII art from a picture or clip without installing anything or uploading their files. Choose a file, adjust it with a live preview, and save the result. The whole tool is a single HTML page, and every conversion runs in your browser.
+
+* **Images, videos and GIFs**: choose a file or drop it on the page. Videos and GIFs play in the preview.
+* **Tune the look**: mono or color, a black, white or transparent background, 20 to 240 characters wide, five character sets including your own, plus contrast, brightness and invert.
+* **Save it your way**: PNG, plain text, color HTML, animated GIF, or copy to the clipboard.
+* **Your files stay on your device**: nothing is sent to a server.
+
+</details>
+
 ## More
 - <https://github.com/akilasatolu>
 - <https://gitfut.com/akilasatolu>
