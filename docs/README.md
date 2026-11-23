@@ -36,6 +36,8 @@ For anyone who wants ASCII art from a picture or clip without installing anythin
 * **Save it your way**: PNG, plain text, color HTML, animated GIF, or copy to the clipboard.
 * **Your files stay on your device**: nothing is sent to a server.
 
+MIT licensed.
+
 </details>
 
 ## More
