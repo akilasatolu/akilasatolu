@@ -13,6 +13,20 @@
 ## Projects
 
 <details markdown="1">
+<summary><a href="https://akilasatolu.github.io/tiny-md2docs/">tiny-md2docs</a> — turn the Markdown in docs/ into a docs site on GitHub Pages, with one line of config</summary>
+
+For teams and developers who want to publish documentation quickly. tiny-md2docs is a small Jekyll theme: add one `remote_theme` line to `docs/_config.yml`, put Markdown files in `docs/`, and turn on GitHub Pages to get a documentation site.
+
+* **Standard Pages build only**: no workflow, npm or extra plugins to set up.
+* **Built-in docs features**: sidebar, search, table of contents, breadcrumbs, code copy, dark mode, multilingual pages and a 404 page.
+* **Search that handles Japanese**: runs in the browser with no external service, and also covers Chinese, Korean and languages that separate words with spaces.
+* **Small and adjustable**: CSS and JS are under 16 KB gzipped, and colors change by overriding CSS variables.
+
+MIT licensed.
+
+</details>
+
+<details markdown="1">
 <summary><a href="https://akilasatolu.github.io/tsuzuri/">Tsuzuri</a> — turn your README into a docs site on GitHub Pages, with one command</summary>
 
 For product builders who would rather spend their time on the product than on a docs site. Tsuzuri takes the README you already have, follows its links to your other Markdown pages, and publishes them as a finished-looking docs site on GitHub Pages. No docs framework to learn, no theme to design, no second copy of your docs to keep in sync.
