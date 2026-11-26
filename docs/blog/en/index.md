@@ -2,6 +2,8 @@
 
 🌐 **English** \| [日本語](../ja/index.md) \| [한국어](../ko/index.md)
 
+- [I Almost Lost the Point of Building It, Then Made tiny-md2docs, a One-Line Theme](20261127-2.md)<br><small>Nov 27, 2026</small>
+- [I Built Tsuzuri: Write a README and Get a Docs Site](20261127-1.md)<br><small>Nov 27, 2026</small>
 - [I Switched to a Sonnet Main Agent and Left Only Review to Opus](20261101-1.md)<br><small>Nov 1, 2026</small>
 - [I Moved Review Back to a Subagent, and Tried Haiku for the Worker but Stayed With Sonnet](20261017-1.md)<br><small>Oct 17, 2026</small>
 - [I Tried to Improve My Workflow, and Keeping the Current One Turned Out Best](20261011-3.md)<br><small>Oct 11, 2026</small>
