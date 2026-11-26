@@ -141,6 +141,84 @@
   }
 }
 
+.markdown-body details {
+  margin-bottom: 12px;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+}
+
+.markdown-body details > summary {
+  position: relative;
+  padding: 16px 20px 16px 48px;
+  line-height: 1.6;
+  list-style: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.markdown-body details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.markdown-body details > summary::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 21px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #59636e;
+  border-bottom: 2px solid #59636e;
+  transform: rotate(-45deg);
+}
+
+.markdown-body details > summary:hover {
+  background-color: #f6f8fa;
+}
+
+.markdown-body details[open] > summary {
+  border-bottom: 1px solid #d1d9e0;
+  border-radius: 7px 7px 0 0;
+}
+
+.markdown-body details[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.markdown-body details > :not(summary) {
+  margin-right: 20px;
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+.markdown-body details > summary + * {
+  margin-top: 20px;
+}
+
+.markdown-body details > :last-child {
+  margin-bottom: 20px;
+}
+
+.markdown-body details li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .markdown-body details > summary {
+    padding: 14px 14px 14px 40px;
+  }
+
+  .markdown-body details > summary::before {
+    top: 22px;
+    left: 17px;
+  }
+
+  .markdown-body details > :not(summary) {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+}
+
 :root {
   color-scheme: light dark;
 }
@@ -176,6 +254,19 @@
 
   .markdown-body hr {
     background-color: #3d444d;
+  }
+
+  .markdown-body details,
+  .markdown-body details[open] > summary {
+    border-color: #3d444d;
+  }
+
+  .markdown-body details > summary::before {
+    border-color: #9198a1;
+  }
+
+  .markdown-body details > summary:hover {
+    background-color: #151b23;
   }
 
   .markdown-body table th,
